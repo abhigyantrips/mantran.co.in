@@ -1,6 +1,7 @@
 import { fontSans } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 
+import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 
 import '@/styles/globals.css';
@@ -20,6 +21,7 @@ export default function RootLayout({
       >
         <SiteHeader />
         <main className="container flex-1">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );
