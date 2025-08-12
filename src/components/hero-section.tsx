@@ -1,6 +1,7 @@
 'use client';
 
 import { homeConfig } from '@/config/home';
+import { siteConfig } from '@/config/site';
 import Autoplay from 'embla-carousel-autoplay';
 import { ChevronDown } from 'lucide-react';
 
@@ -10,6 +11,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
+
+import { WhatsAppIcon } from './brand-icons';
 
 export function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,24 +45,24 @@ export function HeroSection() {
             className="object-cover"
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/60 md:bg-black/50" />
         </div>
       ))}
 
       {/* Content Overlay */}
-      <div className="relative z-10 flex h-full items-center justify-center px-4">
-        <div className="text-center text-white">
-          <h1 className="mb-4 font-serif text-4xl leading-tight font-bold md:text-6xl lg:text-7xl">
+      <div className="relative z-10 flex h-full items-end px-4 md:items-center md:justify-center">
+        <div className="text-left text-white md:text-center">
+          <h1 className="mb-2 font-serif text-5xl leading-tight font-bold md:text-6xl lg:text-7xl">
             {homeConfig.hero.title}
           </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-200 md:text-xl lg:text-2xl">
+          <p className="mx-auto mb-4 max-w-2xl text-lg text-gray-200 md:mb-8 md:text-xl lg:text-2xl">
             {homeConfig.hero.description}
           </p>
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+          <div className="hidden flex-row justify-center gap-4 md:flex">
             <Button
               asChild
               size="lg"
-              className="bg-green-600 text-lg font-semibold transition-all duration-200 hover:scale-105 hover:bg-green-700"
+              className="text-lg font-semibold transition-all duration-200 hover:scale-105"
             >
               <Link href={homeConfig.hero.cta.primary.link}>
                 {homeConfig.hero.cta.primary.text}
@@ -76,6 +79,20 @@ export function HeroSection() {
               </Link>
             </Button>
           </div>
+          <Button
+            asChild
+            size="lg"
+            className="mb-24 bg-green-700 hover:bg-green-900 md:hidden"
+          >
+            <Link
+              href={siteConfig.contact.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsAppIcon fill="white" className="size-5" />
+              Contact Us
+            </Link>
+          </Button>
         </div>
       </div>
 

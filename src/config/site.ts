@@ -21,10 +21,15 @@ export const siteConfig = {
     phone: '+91 93249 92740',
     email: 'mantrancounseling@gmail.com',
     whatsapp:
-      'https://wa.me/919324992740&text=Hello%2C%20I%20received%20your%20phone%20number%20from%20the%20website.%20I%20would%20like%20assistance%20with...%20(career%20counseling%2C%20therapy%2C%20etc.)',
+      'https://wa.me/919324992740?text=Hello%2C%20I%20received%20your%20phone%20number%20from%20the%20website.%20I%20would%20like%20assistance%20with...%20(career%20counseling%2C%20therapy%2C%20etc.)',
   } as ContactInfo,
 
   socials: [
+    {
+      name: 'Instagram',
+      href: 'https://instagram.com/mantran',
+      icon: 'instagram',
+    },
     {
       name: 'Facebook',
       href: 'https://facebook.com/mantran',
@@ -32,13 +37,8 @@ export const siteConfig = {
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/company/mantran',
+      href: 'https://linkedin.com/in/abhigyantripathi',
       icon: 'linkedin',
-    },
-    {
-      name: 'Instagram',
-      href: 'https://instagram.com/mantran',
-      icon: 'instagram',
     },
   ] as SocialLink[],
 

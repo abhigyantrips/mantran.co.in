@@ -1,7 +1,7 @@
 'use client';
 
 import { siteConfig } from '@/config/site';
-import { Facebook, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 import { useEffect, useState } from 'react';
 
@@ -11,7 +11,14 @@ import { usePathname } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
 
-import { WhatsAppIcon } from '@/components/brand-icons';
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
+  WhatsAppIcon,
+} from '@/components/brand-icons';
+import { MobileNav } from '@/components/mobile-nav';
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
@@ -21,17 +28,23 @@ import {
 } from '@/components/ui/tooltip';
 
 const socialIcons = {
-  facebook: Facebook,
-  linkedin: Linkedin,
-  instagram: Instagram,
-  twitter: Instagram, // fallback
+  facebook: FacebookIcon,
+  linkedin: LinkedInIcon,
+  instagram: InstagramIcon,
+  twitter: TwitterIcon,
 };
 
 function ContactBar({ className }: { className?: string }) {
   return (
-    <div className={cn('bg-green-600 px-4 py-2 text-sm text-white', className)}>
+    <div
+      className={cn(
+        'bg-green-600 px-2 py-1 text-sm text-white md:px-4 md:py-2',
+        className
+      )}
+    >
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-4">
+        {/* Desktop: Full contact info + socials */}
+        <div className="hidden items-center gap-4 sm:flex">
           <div className="flex items-center gap-2">
             <Phone className="h-4 w-4" />
             <Link href={`tel:${siteConfig.contact.phone}`}>
@@ -45,7 +58,7 @@ function ContactBar({ className }: { className?: string }) {
             </Link>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="hidden items-center gap-2 sm:flex">
           {siteConfig.socials.map((social) => {
             const Icon = socialIcons[social.icon];
             return (
@@ -61,6 +74,33 @@ function ContactBar({ className }: { className?: string }) {
             );
           })}
         </div>
+
+        {/* Mobile: Only call/email buttons */}
+        <div className="flex w-full items-center justify-center gap-2 sm:hidden">
+          <Button
+            asChild
+            size="sm"
+            variant="ghost"
+            className="h-6 px-2 text-xs text-white hover:bg-white/20 hover:text-white"
+          >
+            <Link href={`tel:${siteConfig.contact.phone}`}>
+              <Phone className="mr-1 h-3 w-3" />
+              Call Us
+            </Link>
+          </Button>
+          <div className="h-4 w-px bg-white/30" />
+          <Button
+            asChild
+            size="sm"
+            variant="ghost"
+            className="h-6 px-2 text-xs text-white hover:bg-white/20 hover:text-white"
+          >
+            <Link href={`mailto:${siteConfig.contact.email}`}>
+              <Mail className="mr-1 h-3 w-3" />
+              Email Us
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -68,10 +108,10 @@ function ContactBar({ className }: { className?: string }) {
 
 function HeaderContent({ className }: { className?: string }) {
   return (
-    <div className={cn('bg-white px-4', className)}>
+    <div className={cn('bg-white md:px-4', className)}>
       <div className="container mx-auto">
         <div className="flex h-20 items-center justify-between">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center">
             <div className="relative h-12 w-40 md:h-16 md:w-52">
               <Image
                 src="/logo.svg"
@@ -80,7 +120,7 @@ function HeaderContent({ className }: { className?: string }) {
                 className="object-contain"
               />
             </div>
-            <div className="bg-border h-12 w-px" />
+            <div className="bg-border mr-4 h-12 w-px" />
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
@@ -100,7 +140,9 @@ function HeaderContent({ className }: { className?: string }) {
               </Tooltip>
             </TooltipProvider>
           </div>
-          <nav className="flex items-center">
+
+          {/* Desktop Navigation */}
+          <nav className="hidden items-center md:flex">
             {siteConfig.links.map((link) => (
               <Button asChild key={link.name} className="mr-2" variant="ghost">
                 <Link href={link.href}>{link.name}</Link>
@@ -117,6 +159,9 @@ function HeaderContent({ className }: { className?: string }) {
               </Link>
             </Button>
           </nav>
+
+          {/* Mobile Menu */}
+          <MobileNav />
         </div>
       </div>
     </div>
@@ -138,7 +183,6 @@ export function SiteHeader() {
   }, []);
 
   if (isHomePage) {
-    // Home page header: hidden by default, appears on scroll WITHOUT contact bar
     return (
       <header
         className={cn(
@@ -151,7 +195,6 @@ export function SiteHeader() {
     );
   }
 
-  // Other pages header: visible by default with contact bar, hides contact bar on scroll
   return (
     <header className="w-full">
       <ContactBar
