@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 import { fontSans, fontSerif } from '@/lib/fonts';
 
+import { SiteHeader } from '@/components/site-header';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 
 import '@/styles/globals.css';
@@ -37,7 +38,8 @@ export default function RootLayout({
       <body
         className={`${fontSans.variable} ${fontSerif.variable} ${fontSans.className} antialiased`}
       >
-        {children}
+        <SiteHeader />
+        <main>{children}</main>
         <TailwindIndicator />
       </body>
     </html>

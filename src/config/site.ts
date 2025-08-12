@@ -1,4 +1,4 @@
-import { CompanyLogo, NavLink } from '@/types/ui';
+import { CompanyLogo, ContactInfo, NavLink, SocialLink } from '@/types';
 
 export type SiteConfig = typeof siteConfig;
 
@@ -17,13 +17,36 @@ export const siteConfig = {
     'wellness',
   ],
 
+  contact: {
+    phone: '+91 12345 67890',
+    email: 'mantrancounseling@gmail.com',
+  } as ContactInfo,
+
+  socials: [
+    {
+      name: 'Facebook',
+      href: 'https://facebook.com/mantran',
+      icon: 'facebook',
+    },
+    {
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/mantran',
+      icon: 'linkedin',
+    },
+    {
+      name: 'Instagram',
+      href: 'https://instagram.com/mantran',
+      icon: 'instagram',
+    },
+  ] as SocialLink[],
+
   links: [
     {
       name: 'Home',
       href: '/',
     },
     {
-      name: 'Who We Are',
+      name: 'About Us',
       href: '/about',
     },
     {
@@ -31,9 +54,16 @@ export const siteConfig = {
       href: '/services',
     },
     {
-      name: 'Career Counseling (EduMilestones)',
-      href: '/career-counseling',
-      external: true,
+      name: 'Blogs',
+      href: '/blogs',
+    },
+    {
+      name: 'Gallery',
+      href: '/gallery',
+    },
+    {
+      name: 'Contact Us',
+      href: '/contact',
     },
   ] as NavLink[],
 
