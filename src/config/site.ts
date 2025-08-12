@@ -37,7 +37,7 @@ export const siteConfig = {
     },
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/abhigyantripathi',
+      href: 'https://linkedin.com/in/pratikshatripathi',
       icon: 'linkedin',
     },
   ] as SocialLink[],

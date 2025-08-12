@@ -112,7 +112,7 @@ function HeaderContent({ className }: { className?: string }) {
       <div className="container mx-auto">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
-            <div className="relative h-12 w-40 md:h-16 md:w-52">
+            <div className="relative h-12 w-40 md:h-16 md:w-42">
               <Image
                 src="/logo.svg"
                 alt="Mantran Logo"
