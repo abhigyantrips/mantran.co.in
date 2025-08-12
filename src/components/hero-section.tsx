@@ -10,21 +10,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from '@/components/ui/carousel';
 
 export function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const plugin = useRef(
-    Autoplay({
-      delay: 4000,
-      stopOnInteraction: false,
-      stopOnMouseEnter: false,
-    })
-  );
 
   // Fallback manual rotation for testing
   useEffect(() => {
@@ -71,7 +59,7 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-green-600 px-8 py-3 text-lg font-semibold transition-all duration-200 hover:scale-105 hover:bg-blue-700"
+              className="bg-green-600 text-lg font-semibold transition-all duration-200 hover:scale-105 hover:bg-green-700"
             >
               <Link href={homeConfig.hero.cta.primary.link}>
                 {homeConfig.hero.cta.primary.text}
@@ -81,7 +69,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white bg-transparent px-8 py-3 text-lg font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-white hover:text-black"
+              className="border-white bg-transparent text-lg font-semibold text-white transition-all duration-200 hover:scale-105 hover:bg-white hover:text-black"
             >
               <Link href={homeConfig.hero.cta.secondary.link}>
                 {homeConfig.hero.cta.secondary.text}

@@ -46,7 +46,7 @@ export const siteConfig = {
       href: '/',
     },
     {
-      name: 'About Us',
+      name: 'Who We Are',
       href: '/about',
     },
     {
@@ -54,16 +54,9 @@ export const siteConfig = {
       href: '/services',
     },
     {
-      name: 'Blogs',
-      href: '/blogs',
-    },
-    {
-      name: 'Gallery',
-      href: '/gallery',
-    },
-    {
-      name: 'Contact Us',
-      href: '/contact',
+      name: 'Career Counseling (EduMilestones)',
+      href: '/career-counseling',
+      external: true,
     },
   ] as NavLink[],
 

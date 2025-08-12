@@ -22,11 +22,15 @@ export function HomeHeader() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              <span>{siteConfig.contact.phone}</span>
+              <Link href={`tel:${siteConfig.contact.phone}`}>
+                {siteConfig.contact.phone}
+              </Link>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="h-4 w-4" />
-              <span>{siteConfig.contact.email}</span>
+              <Link href={`mailto:${siteConfig.contact.email}`}>
+                {siteConfig.contact.email}
+              </Link>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -59,15 +63,16 @@ export function HomeHeader() {
               className="object-contain brightness-0 invert" // Makes logo white
             />
           </div>
-          <nav className="flex items-center gap-8">
+          <nav className="flex items-center">
             {siteConfig.links.map((link) => (
-              <Link
+              <Button
+                asChild
                 key={link.name}
-                href={link.href}
-                className="font-medium text-white transition-colors hover:text-blue-300"
+                className="mr-2 text-white hover:bg-white/20 hover:text-white"
+                variant="ghost"
               >
-                {link.name}
-              </Link>
+                <Link href={link.href}>{link.name}</Link>
+              </Button>
             ))}
             <Button className="bg-green-600 hover:bg-green-700">
               Get In Touch
