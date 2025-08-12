@@ -11,6 +11,7 @@ import { usePathname } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
 
+import { WhatsAppIcon } from '@/components/brand-icons';
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
@@ -105,8 +106,15 @@ function HeaderContent({ className }: { className?: string }) {
                 <Link href={link.href}>{link.name}</Link>
               </Button>
             ))}
-            <Button className="bg-green-600 hover:bg-green-700">
-              Get In Touch
+            <Button asChild className="bg-green-600 hover:bg-green-700">
+              <Link
+                href={siteConfig.contact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WhatsAppIcon fill="white" className="size-5" />
+                Contact Us
+              </Link>
             </Button>
           </nav>
         </div>

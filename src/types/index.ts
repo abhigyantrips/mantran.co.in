@@ -1,3 +1,5 @@
+import { SVGProps } from 'react';
+
 export interface NavLink {
   name: string;
   href: string;
@@ -19,6 +21,7 @@ export interface SocialLink {
 export interface ContactInfo {
   phone: string;
   email: string;
+  whatsapp: string;
 }
 
 export interface BackgroundImage {
@@ -26,3 +29,7 @@ export interface BackgroundImage {
   src: string;
   alt: string;
 }
+
+export type IconSvgProps = SVGProps<SVGSVGElement> & {
+  size?: number;
+};

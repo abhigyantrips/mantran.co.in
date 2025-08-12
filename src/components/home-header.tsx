@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 
+import { WhatsAppIcon } from './brand-icons';
+
 const socialIcons = {
   facebook: Facebook,
   linkedin: Linkedin,
@@ -74,8 +76,15 @@ export function HomeHeader() {
                 <Link href={link.href}>{link.name}</Link>
               </Button>
             ))}
-            <Button className="bg-green-600 hover:bg-green-700">
-              Get In Touch
+            <Button asChild className="bg-green-600 hover:bg-green-700">
+              <Link
+                href={siteConfig.contact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <WhatsAppIcon fill="white" className="size-5" />
+                Contact Us
+              </Link>
             </Button>
           </nav>
         </div>

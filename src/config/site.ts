@@ -18,8 +18,10 @@ export const siteConfig = {
   ],
 
   contact: {
-    phone: '+91 12345 67890',
+    phone: '+91 93249 92740',
     email: 'mantrancounseling@gmail.com',
+    whatsapp:
+      'https://wa.me/919324992740&text=Hello%2C%20I%20received%20your%20phone%20number%20from%20the%20website.%20I%20would%20like%20assistance%20with...%20(career%20counseling%2C%20therapy%2C%20etc.)',
   } as ContactInfo,
 
   socials: [
@@ -55,7 +57,7 @@ export const siteConfig = {
     },
     {
       name: 'Career Counseling (EduMilestones)',
-      href: '/career-counseling',
+      href: 'https://amantran.edumilestones.com/',
       external: true,
     },
   ] as NavLink[],
