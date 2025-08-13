@@ -23,7 +23,21 @@ export const metadata: Metadata = {
   ],
   keywords: siteConfig.keywords,
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
+  },
+  openGraph: {
+    siteName: `${siteConfig.title}`,
+    title: `${siteConfig.title}`,
+    description: `${siteConfig.description}`,
+    url: `${siteConfig.url}`,
+    images: [
+      {
+        url: `${siteConfig.url}/logo.jpeg`,
+        width: 1061,
+        height: 454,
+      },
+    ],
+    type: 'website',
   },
 };
 
