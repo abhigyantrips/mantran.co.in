@@ -97,7 +97,7 @@ export function MetricsBar() {
   return (
     <section ref={sectionRef} className="bg-primary py-16 md:py-20">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
+        <div className="grid grid-cols-2 place-items-center gap-8 md:grid-cols-4 md:gap-12">
           {metrics.map((metric) => (
             <MetricCard key={metric.id} metric={metric} isVisible={isVisible} />
           ))}

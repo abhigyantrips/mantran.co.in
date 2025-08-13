@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ],
   keywords: siteConfig.keywords,
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.svg',
   },
 };
 

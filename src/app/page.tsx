@@ -2,6 +2,7 @@ import { HomeHeader } from '@/components/home-header';
 import { AboutSection } from '@/components/sections/about';
 import { HeroSection } from '@/components/sections/hero';
 import { MetricsBar } from '@/components/sections/metrics';
+import { ServicesSection } from '@/components/sections/services';
 import { TestimonialsSection } from '@/components/sections/testimonials';
 
 export default function Home() {
@@ -16,9 +17,7 @@ export default function Home() {
 
         <MetricsBar />
 
-        <section className="flex h-128 flex-col items-center justify-center bg-blue-300">
-          <p className="font-bold">Our Services</p>
-        </section>
+        <ServicesSection />
 
         <TestimonialsSection />
 
