@@ -1,5 +1,6 @@
 import { HeroSection } from '@/components/hero-section';
 import { HomeHeader } from '@/components/home-header';
+import { TestimonialsSection } from '@/components/testimonials-section';
 
 export default function Home() {
   return (
@@ -21,9 +22,7 @@ export default function Home() {
           <p className="font-bold">Our Services</p>
         </section>
 
-        <section className="flex h-128 flex-col items-center justify-center bg-green-300">
-          <p className="font-bold">Testimonials</p>
-        </section>
+        <TestimonialsSection />
 
         <section className="flex h-128 flex-col items-center justify-center bg-yellow-300">
           <p className="font-bold">Gallery</p>
