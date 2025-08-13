@@ -111,7 +111,7 @@ function HeaderContent({ className }: { className?: string }) {
     <div className={cn('bg-white md:px-4', className)}>
       <div className="container mx-auto">
         <div className="flex h-20 items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
             <div className="relative h-12 w-40 md:h-16 md:w-42">
               <Image
                 src="/logo.svg"
@@ -120,7 +120,7 @@ function HeaderContent({ className }: { className?: string }) {
                 className="object-contain"
               />
             </div>
-            <div className="bg-border mr-4 h-12 w-px" />
+            <div className="bg-border ml-2 h-12 w-px" />
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>

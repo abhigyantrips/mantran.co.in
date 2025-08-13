@@ -1,6 +1,8 @@
-import { HeroSection } from '@/components/hero-section';
 import { HomeHeader } from '@/components/home-header';
-import { TestimonialsSection } from '@/components/testimonials-section';
+import { AboutSection } from '@/components/sections/about';
+import { HeroSection } from '@/components/sections/hero';
+import { MetricsBar } from '@/components/sections/metrics';
+import { TestimonialsSection } from '@/components/sections/testimonials';
 
 export default function Home() {
   return (
@@ -10,13 +12,9 @@ export default function Home() {
       <div className="flex flex-col">
         <HeroSection />
 
-        <section className="flex h-128 flex-col items-center justify-center bg-purple-200">
-          <p className="font-bold">About Us / Meet the Founder</p>
-        </section>
+        <AboutSection />
 
-        <section className="flex h-48 flex-col items-center justify-center bg-red-300">
-          <p className="font-bold">Metrics Bar</p>
-        </section>
+        <MetricsBar />
 
         <section className="flex h-128 flex-col items-center justify-center bg-blue-300">
           <p className="font-bold">Our Services</p>

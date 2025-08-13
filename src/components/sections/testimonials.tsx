@@ -1,4 +1,3 @@
-// src/components/testimonials-section.tsx
 'use client';
 
 import { type Testimonial, testimonialsConfig } from '@/config/testimonials';
@@ -15,100 +14,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
-
-// src/components/testimonials-section.tsx
 
 // Extended testimonial type with tempId for animations
 interface AnimatedTestimonial extends Testimonial {

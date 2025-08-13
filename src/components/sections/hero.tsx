@@ -2,22 +2,20 @@
 
 import { homeConfig } from '@/config/home';
 import { siteConfig } from '@/config/site';
-import Autoplay from 'embla-carousel-autoplay';
 import { ChevronDown } from 'lucide-react';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { WhatsAppIcon } from '@/components/brand-icons';
 import { Button } from '@/components/ui/button';
-
-import { WhatsAppIcon } from './brand-icons';
 
 export function HeroSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fallback manual rotation for testing
+  // Image rotation logic
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(
@@ -30,7 +28,7 @@ export function HeroSection() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
-      {/* Try with simple background first */}
+      {/* Image Carousel */}
       {homeConfig.hero.backgrounds.map((bg, index) => (
         <div
           key={bg.id}
