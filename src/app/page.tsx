@@ -1,5 +1,7 @@
 import { HomeHeader } from '@/components/home-header';
 import { AboutSection } from '@/components/sections/about';
+import { ContactCTASection } from '@/components/sections/contact';
+import { GallerySection } from '@/components/sections/gallery';
 import { HeroSection } from '@/components/sections/hero';
 import { MetricsBar } from '@/components/sections/metrics';
 import { ServicesSection } from '@/components/sections/services';
@@ -21,13 +23,9 @@ export default function Home() {
 
         <TestimonialsSection />
 
-        <section className="flex h-128 flex-col items-center justify-center bg-yellow-300">
-          <p className="font-bold">Gallery</p>
-        </section>
+        <GallerySection />
 
-        <section className="flex h-64 flex-col items-center justify-center bg-gray-300">
-          <p className="font-bold">Contact Us (Final CTA)</p>
-        </section>
+        <ContactCTASection />
       </div>
     </>
   );
